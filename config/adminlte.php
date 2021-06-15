@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Sistema de Saldo',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>BalanceApp</b>LTE',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -226,6 +226,35 @@ return [
 
     'menu' => [
         // Navbar items:
+        // Sidebar items:
+        
+        
+        ['header' => 'Menu'],
+        [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fas fa-tachometer-alt',
+        ],
+        [
+            'text' => 'Financeiro',
+            'icon' => 'fas fa-euro-sign',
+            'submenu' => [
+                [
+                    'text' => 'Saldo',
+                    'url' => 'admin/balance',
+                    'icon' => 'far fa-credit-card'
+                ],
+                [
+                    'text' => 'Histórico',
+                    'url' => 'admin/historic',
+                    'icon' => 'fas fa-history'
+                ],
+            ],
+        ],
+    ],
+    /*
+    'menu' => [
+        // Navbar items:
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
@@ -319,7 +348,7 @@ return [
             'url'        => '#',
         ],
     ],
-
+    */
     /*
     |--------------------------------------------------------------------------
     | Menu Filters
